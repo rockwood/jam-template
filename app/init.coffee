@@ -7,7 +7,7 @@ define [
   "use strict"
   ->
     app.router = new AppRouter();
-    Backbone.history.start({pushState: true})
+    Backbone.history.start()
 
     # TODO - kill this in production
-    app.namespace('Pampers');
+    app.namespace('App');

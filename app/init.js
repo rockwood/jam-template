@@ -2,9 +2,7 @@ define(['backbone', 'jquery', 'app/app', 'app/routers/app_router'], function(Bac
   "use strict";
   return function() {
     app.router = new AppRouter();
-    Backbone.history.start({
-      pushState: true
-    });
-    return app.namespace('Pampers');
+    Backbone.history.start();
+    return app.namespace('App');
   };
 });
