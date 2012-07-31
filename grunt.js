@@ -22,16 +22,7 @@ module.exports = function(grunt) {
         variables: {
           css: 'dist/css/app.css',
           js: 'jam/require.js',
-          title: 'Pampers | Dev Build'
-        }
-      },
-      comp: {
-        src: homepage_template,
-        dest: 'comp/template.html',
-        variables: {
-          css: '/dist/css/app.css',
-          js: '/dist/js/app.js',
-          title: 'Pampers | Comp'
+          title: 'Jam Template | Dev Build'
         }
       },
       dist: {
@@ -40,7 +31,7 @@ module.exports = function(grunt) {
         variables: {
           css: './css/app.min.css',
           js: './js/app.min.js',
-          title: 'Pampers'
+          title: 'Jam Template'
         }
       }
     },
