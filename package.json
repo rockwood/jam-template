@@ -1,0 +1,21 @@
+{
+  "name": "Jam Template",
+  "version": "0.0.1",
+  "author": "Kevin Rockwood <kevin@rockwood.me>",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockwood/jam-template"
+  },
+  "dependencies": {
+    "grunt-coffee"     : "latest",
+    "grunt-imagine"    : "latest",
+    "grunt-less"       : "latest",
+    "grunt-jam"        : "latest",
+    "grunt-handlebars" : "latest"
+  },
+  "main": "./",
+  "engines": {
+    "node": ">= 0.4.11"
+  }
+}
