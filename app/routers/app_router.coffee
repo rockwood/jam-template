@@ -12,7 +12,6 @@ define  [
 
     initialize: ->
       app.log('appRouter initialized')
-
+    
     example: ->
-      app.log('exampleView')
-      $('#main').append(new ExampleView().el);
+      $('#main').html(new ExampleView().el);

@@ -7,8 +7,7 @@ define(['backbone', 'jquery', 'app/app', 'app/views/example'], function(Backbone
       return app.log('appRouter initialized');
     },
     example: function() {
-      app.log('exampleView');
-      return $('#main').append(new ExampleView().el);
+      return $('#main').html(new ExampleView().el);
     }
   });
 });

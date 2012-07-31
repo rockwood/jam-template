@@ -1,6 +1,7 @@
 define(['backbone', 'app/app', 'hbt!app/templates/example'], function(Backbone, app, template) {
   return app.Views.ExampleView = Backbone.View.extend({
     id: 'exampleView',
+    className: 'span',
     initialize: function() {
       return this.render();
     },

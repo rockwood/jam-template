@@ -8,6 +8,8 @@ define [
     
     id: 'exampleView'
 
+    className: 'span'
+
     initialize: ->
       @render()
 
