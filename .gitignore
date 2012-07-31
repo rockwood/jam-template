@@ -18,3 +18,5 @@ npm-debug.log
 node_modules
 jam
 dist
+app/*.js
+app/**/*.js
