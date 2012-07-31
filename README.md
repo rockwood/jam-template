@@ -16,6 +16,8 @@ Prerequisite: Install [Node.js](http://nodejs.org/)
     npm install jam -g
     cd Working-Directory/
     git clone git@github.com:rockwood/jam-template.git
+    cd jam-template
+    npm install
 
 Usage
 -----
@@ -23,6 +25,10 @@ Usage
 Install client side dependencies with:
     
     jam install module-name
+
+By default, Jam-Template requires `backbone` and `hbt`. To install do:
+    
+    jam install backbone && jam install hbt
 
 more info at: [http://jamjs.org](http://jamjs.org)
 
