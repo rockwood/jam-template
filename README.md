@@ -18,22 +18,20 @@ Prerequisite: Install [Node.js](http://nodejs.org/)
     git clone git@github.com:rockwood/jam-template.git
     cd jam-template
     npm install
+    jam install backbone && jam install hbt
 
 Usage
 -----
-#### Jam
+### Jam
 Install client side dependencies with:
     
     jam install module-name
 
-By default, Jam-Template requires `backbone` and `hbt`. To install do:
-    
-    jam install backbone && jam install hbt
+By default, Jam-Template requires `backbone` and `hbt`.
 
-more info at: [http://jamjs.org](http://jamjs.org)
+More info at: [http://jamjs.org](http://jamjs.org)
 
-
-#### Grunt
+### Grunt
 Create a local web server at [http://localhost:8000](http://localhost:8000) and watch .coffee and .less files for changes:
     
     grunt run
@@ -41,3 +39,9 @@ Create a local web server at [http://localhost:8000](http://localhost:8000) and 
 Compile dependencies and app code into the /dist directory:
     
     grunt build
+
+### Testing
+
+Jam-Template comes pre-installed with [Jasmine](http://pivotal.github.com/jasmine/). With the server running, hit [http://localhost:8000/test](http://localhost:8000/test).
+
+Place specs (.js or .coffee) in the test/spec/ directory, and require them in test/SpecRunner
