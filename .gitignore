@@ -20,3 +20,6 @@ jam
 dist
 app/*.js
 app/**/*.js
+
+test/spec/**/*.js
+test/spec/*.js
