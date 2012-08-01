@@ -1,4 +1,4 @@
-define(["test/spec/main_spec"], function() {
+define(["test/spec/app_spec"], function() {
   var SpecRunner;
   SpecRunner = function() {
     var currentWindowOnload, execJasmine, htmlReporter, jasmineEnv;

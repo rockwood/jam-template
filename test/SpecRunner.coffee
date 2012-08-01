@@ -1,5 +1,5 @@
 define [
-  "test/spec/main_spec"
+  "test/spec/app_spec"
   ], ->
   SpecRunner = ->
     execJasmine = ->
