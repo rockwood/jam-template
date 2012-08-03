@@ -10,8 +10,9 @@
   "dependencies": {
     "grunt"            : "latest",
     "grunt-coffee"     : "latest",
+    "grunt-coffeepot"  : "latest",
     "grunt-imagine"    : "latest",
-    "grunt-less"       : "latest",
+    "grunt-compass"    : "latest",
     "grunt-jam"        : "latest",
     "grunt-handlebars" : "latest",
     "handlebars"       : "latest"

@@ -72,29 +72,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // Convert less to css
-    less: {
-      dev: {
-        src: [main_stylesheet],
-        dest: output_directory + 'css/app.css'
-      },
-      dist: {
-        src: [main_stylesheet],
-        dest: output_directory + 'css/app.min.css',
-        options: {
-          compress: true
-        }
-      }
-    },
-
     watch: {
-      coffee: {
-        files: '<config:coffee.dev.src>',
-        tasks: 'coffee'
-      },
-      less: {
-        files: ['app/stylesheets/**/*.less'],
-        tasks: 'less'
+      compass: {
+        files: ['app/stylesheets/**/*.scss'],
+        tasks: 'compass:dev concat'
       },
       template: {
         files: [homepage_template],
@@ -103,8 +84,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'template coffee jam less pngmin jpgmin');
-  grunt.registerTask('run', 'server watch');
+  grunt.registerTask('build', 'template coffee jam compass:dist concat pngmin jpgmin');
+  grunt.registerTask('run', 'coffeepot watch');
 
   grunt.registerTask('default', 'build run');
 };
