@@ -3,8 +3,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-imagine');
   grunt.loadNpmTasks('grunt-coffee');
-  grunt.loadNpmTasks('grunt-less');
   grunt.loadNpmTasks('grunt-jam');
+  grunt.loadNpmTasks('grunt-compass');
+  grunt.loadNpmTasks('grunt-coffeepot');
+  
   grunt.loadTasks('tasks');
 
   var output_directory = 'dist/';
@@ -14,13 +16,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    // convert the homepage handelbars
+    // convert the homepage.handelbars template
     template: {
       dev: {
         src: homepage_template,
         dest: 'index.html',
         variables: {
-          css: 'dist/css/app.css',
+          css: 'dist/css/all.min.css',
           js: 'jam/require.js',
           title: 'Jam Template | Dev Build'
         }
@@ -29,10 +31,40 @@ module.exports = function(grunt) {
         src: homepage_template,
         dest: output_directory + 'index.html',
         variables: {
-          css: './css/app.min.css',
+          css: './dist/css/all.min.css',
           js: './js/app.min.js',
           title: 'Jam Template'
         }
+      }
+    },
+
+    compass: {
+      dev: {
+        src: 'app/stylesheets',
+        require: 'ZURB-foundation',
+        dest: 'dist/css',
+        images: 'img',
+        outputstyle: 'expanded',
+        linecomments: true,
+        relativeassets: true,
+        forcecompile: true
+      },
+      dist: {
+        src: 'app/stylesheets',
+        dest: 'dist/css',
+        require: 'ZURB-foundation',
+        outputstyle: 'compressed',
+        images: 'dist/img',
+        linecomments: false,
+        relativeassets: true,
+        forcecompile: true
+      }
+    },
+
+    concat: {
+      dist: {
+        src: ['dist/css/app.css', 'dist/css/foundation.css'],
+        dest: 'dist/css/all.min.css'
       }
     },
 

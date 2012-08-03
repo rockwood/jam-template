@@ -1,3 +1,4 @@
+
 define(['backbone'], function(Backbone) {
   var App, appInstance, appState;
   appState = Backbone.Model.extend();
