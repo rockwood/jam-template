@@ -118,7 +118,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', 'template coffee jam compass:dist concat pngmin jpgmin');
+  grunt.registerTask('build', 'template jam compass:dist concat pngmin jpgmin');
   grunt.registerTask('run', 'coffeepot watch');
 
   grunt.registerTask('default', 'build run');
