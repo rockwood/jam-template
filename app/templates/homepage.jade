@@ -1,0 +1,27 @@
+!!!
+
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+//if lt IE 8
+  <html class="no-js lt-ie9 lt-ie8" lang="en">
+//if gt IE 8
+  <html class="no-js lt-ie9" lang="en">
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title #{title}
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='#{css}')
+      
+  body
+    div.container
+      div#main.row
+        h1 Jam Template
+      
+    script(type='text/javascript', src='#{js}')
+    
+    script
+      require(['app/init.js'], function(init){
+        init(); 
+      });

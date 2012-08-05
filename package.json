@@ -14,8 +14,8 @@
     "grunt-imagine"    : "latest",
     "grunt-compass"    : "latest",
     "grunt-jam"        : "latest",
-    "grunt-handlebars" : "latest",
-    "handlebars"       : "latest"
+    "grunt-templater"  : "latest",
+    "grunt-jade"       : "latest"
   },
   "main": "./",
   "engines": {

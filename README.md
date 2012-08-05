@@ -27,12 +27,12 @@ Install client side dependencies with:
     
     jam install module-name
 
-By default, Jam-Template requires `backbone` and `hbt`.
+By default, Jam-Template requires `backbone` and `jade`.
 
 More info at: [http://jamjs.org](http://jamjs.org)
 
 ### Grunt
-Create a local web server at [http://localhost:8000](http://localhost:8000) and watch .coffee and .less files for changes:
+Create a local web server at [http://localhost:8000](http://localhost:8000) and watch .coffee and .sass/.scss files for changes:
     
     grunt run
 

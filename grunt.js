@@ -6,12 +6,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jam');
   grunt.loadNpmTasks('grunt-compass');
   grunt.loadNpmTasks('grunt-coffeepot');
+  grunt.loadNpmTasks('grunt-templater');
   
   grunt.loadTasks('tasks');
 
   var output_directory = 'dist/';
   var main_stylesheet = 'app/stylesheets/_main.less';
-  var homepage_template = 'app/templates/homepage.handlebars';
+  var homepage_template = 'app/templates/homepage.jade';
 
   // Project configuration.
   grunt.initConfig({
@@ -24,14 +25,15 @@ module.exports = function(grunt) {
         variables: {
           css: 'dist/css/all.min.css',
           js: 'jam/require.js',
-          title: 'Jam Template | Dev Build'
+          title: 'Jam Template | Dev Build',
+          pretty: true
         }
       },
       dist: {
         src: homepage_template,
         dest: output_directory + 'index.html',
         variables: {
-          css: './dist/css/all.min.css',
+          css: './css/all.min.css',
           js: './js/app.min.js',
           title: 'Jam Template'
         }

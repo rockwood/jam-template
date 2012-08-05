@@ -1,7 +1,7 @@
 define [
   'backbone'
   'app/app'
-  'hbt!app/templates/example'
+  'jade!app/templates/example'
 ], (Backbone, app, template) ->
   
   app.Views.ExampleView = Backbone.View.extend
