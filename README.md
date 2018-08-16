@@ -42,6 +42,6 @@ Compile dependencies and app code into the /dist directory:
 
 ### Testing
 
-Jam-Template comes pre-installed with [Jasmine](http://pivotal.github.com/jasmine/). With the server running, hit [http://localhost:8000/test](http://localhost:8000/test).
+Jam-Template comes pre-installed with [Jasmine](https://jasmine.github.io/). With the server running, hit [http://localhost:8000/test](http://localhost:8000/test).
 
 Place specs (.js or .coffee) in the test/spec/ directory, and require them in test/SpecRunner
